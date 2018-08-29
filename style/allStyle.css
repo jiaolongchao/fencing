@@ -1,0 +1,128 @@
+body,html{
+    background: #1f1e24
+}
+img{
+    width: 100%;
+    max-width: 100%; 
+}
+.swiper-container{
+    height: 3.54rem;
+}
+.swiper-container img{
+    width: 100%;
+    max-width: 100%;
+}
+.swiper-pagination-bullet{
+    background:rgba(255,255,255,50);
+}
+.swiper-pagination-bullet-active{
+    background: #fff;
+}
+
+
+.introduction{
+    width: 100%;
+    height: 2.23rem;
+    background:#2b2a30;
+    margin: 0.17rem 0; 
+    padding: 0.24rem 0.22rem 0.10rem 0.22rem; 
+    display: flex;
+    justify-content: start;
+    align-items:top;
+    box-sizing: border-box;
+}
+.introduction .logo{ 
+    width: 1.36rem;
+    height: 1.36rem;  
+    flex-shrink: 0;  
+    margin-right: 0.27rem;
+}
+.introduction .intrText .intrText_title{
+    font-size: 0.30rem;
+    color: #ff681f;
+    display: block;
+    margin-bottom: 0.12rem;
+    line-height: 1;
+}
+.introduction .intrText .intrText_con{
+    font-size: 0.26rem;
+    color: #a7a6a6;
+    display: block;
+    line-height: 1.2;
+    margin-bottom: 0.15rem;
+}
+.introduction .intrText .slideUp{
+    font-size: 0.26rem;
+    color: #7da4fa;
+    display: block;
+}
+
+.public_header{
+    height: 0.74rem;
+    box-sizing: border-box;
+    border-bottom:solid 1px #3c3b41;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.public_header .notice_tit{
+    font-size: 0.28rem;
+    color: #b3b3b3;
+}
+.public_header .notice_tit .icon_notice{
+    width: 0.26rem;
+    height: 0.24rem;
+    background: url(../images/icon_notice.png) no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.1rem;
+}
+.public_header .notice_tit .icon_recommend{
+    width: 0.33rem;
+    height: 0.30rem;
+    background: url(../images/icon_recommend.png) no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.05rem;
+}
+.public_header .notice_more{
+    font-size:0.24rem;
+    color:#939393;
+}
+
+
+.notice{
+    background:#2b2a30;
+    padding: 0 0.22rem;    
+    margin-bottom: 0.10rem;
+}
+.notice .notice_item{
+    height: 0.83rem;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.notice .notice_item a{
+    white-space: nowrap;
+    width: 5.50rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.notice .notice_item a,.notice .notice_item span{
+    font-size: 0.26rem;
+    color: #a7a6a6;
+    display: block;
+}
+
+.recommend{
+    background:#2b2a30;
+    padding: 0 0.22rem;  
+}
+.recommend .recommend_item{
+    width: 100%;
+    background:#26242e;
+    border-radius: 0.30rem;
+    overflow: hidden;
+}
