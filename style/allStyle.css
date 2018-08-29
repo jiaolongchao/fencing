@@ -13,12 +13,15 @@ img{
     max-width: 100%;
 }
 .swiper-pagination-bullet{
-    background:rgba(255,255,255,50);
+    background:rgba(255,255,255,0.5);
 }
 .swiper-pagination-bullet-active{
     background: #fff;
 }
-
+.main{
+    height: 100vh;
+    position: relative;
+}
 
 .introduction{
     width: 100%;
@@ -118,11 +121,499 @@ img{
 
 .recommend{
     background:#2b2a30;
-    padding: 0 0.22rem;  
+    padding: 0 0.22rem 1.38rem 0.22rem;  
 }
 .recommend .recommend_item{
     width: 100%;
     background:#26242e;
     border-radius: 0.30rem;
     overflow: hidden;
+    margin-top:0.22rem;    
+}
+.recommend .recomm_item_tit{
+    display: block;
+    color: #fff;
+    font-size:0.3rem;
+    height: 0.86rem;
+    line-height: 0.86rem;
+    padding-left:0.28rem;
+}
+.recommend .recomm_item_wrap{
+    background:#3b3a43;
+    border-bottom-left-radius: 0.30rem;
+    border-bottom-right-radius: 0.30rem;
+    padding: 0 0.40rem 0 0.30rem;
+}
+.recommend .recomm_item_name{
+    height: 2.20rem;    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:solid 1px #26242e;
+}
+.recommend .recomm_item_name:last-child,.holiday_time li:last-child,.mylesson .mylesson_now li:last-child{
+    border-bottom:none;
+}
+.recommend .recomm_item_name .recomm_item_img{
+    width: 2.08rem;
+    height: 1.54rem;
+    border-radius: 0.30rem;
+    overflow: hidden;
+}
+.recommend .recomm_item_name .recomm_item_time{
+    width: 2.80rem;
+    padding-left:0.28rem;
+    box-sizing: border-box;
+}
+.recommend .recomm_item_name .recomm_item_time span{
+   font-size: 0.30rem;
+   color: #d3d3d3;
+   font-family: 'Microsoft YaHei';
+   margin-bottom: 0.12rem;
+   display: block;
+}
+.recommend .recomm_item_name .recomm_item_time em{
+    font-size: 0.26rem;
+    color: #ff681f;
+    font-family: 'Microsoft YaHei';
+ }
+.recommend .recomm_item_name .recomm_item_btn{
+    width: 1.48rem;
+}
+.recommend .recomm_item_name .recomm_item_btn a{
+    display: block;
+    width: 1.48rem;
+    height: 0.62rem;
+    background: #ff681f;
+    text-align: center;
+    line-height: 0.62rem;
+    color: #fff;
+    font-size: 0.26rem;
+    font-family: 'Microsoft YaHei';
+    border-radius: 0.05rem;
+    margin-bottom: 0.12rem;
+}
+.recommend .recomm_item_name .recomm_item_btn span{   
+    color: #a2a2a2;
+    font-size: 0.22rem;
+    font-family: 'Microsoft YaHei';
+    white-space: nowrap;
+}
+
+.footer{
+    height: 0.98rem;
+    border-top:solid 1px #434249;  
+    background: #2a292e;  
+    padding: 0 0.74rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.20rem;
+    font-family: 'Microsoft YaHei';
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+.footer .icon_home{
+    display: block;
+    width: 0.47rem;
+    height: 0.43rem;
+    background: url(../images/icon_home.png) no-repeat center;
+    background-size: cover; 
+    margin-bottom: 0.02rem;
+}
+.footer .icon_subscribe{
+    display: block;
+    width: 0.47rem;
+    height: 0.53rem;
+    background: url(../images/icon_subscribe.png) no-repeat center;
+    background-size: cover; 
+}
+.footer .icon_mine{
+    display: block;
+    width: 0.50rem;
+    height: 0.53rem;
+    background: url(../images/icon_mine.png) no-repeat center;
+    background-size: cover; 
+}
+.footer .active{
+    color: #ff681f;
+}
+.footer .active .icon_home{
+    background: url(../images/icon_home_active.png) no-repeat center;
+    background-size: cover; 
+}
+.footer .active .icon_subscribe{
+    background: url(../images/icon_subscribe_active.png) no-repeat center;
+    background-size: cover; 
+}
+.footer .active .icon_mine{
+    background: url(../images/icon_mine_active.png) no-repeat center;
+    background-size: cover; 
+}
+
+.cardList{
+    padding-top: 0.34rem;
+}
+.cardItem{
+    padding:0.52rem 0 0.48rem 0;
+    background:#2b2a30;
+}
+.cardItem2{
+    padding:0.23rem 0;
+    background:#2b2a30;
+    margin-bottom: 0.12rem;
+}
+.cardStyle{
+    width: 7.09rem;
+    height: 2.36rem;
+    padding-top: 0.47rem;
+    padding-left:0.33rem;
+    box-sizing: border-box;
+    margin: 0 auto 0.16rem auto; 
+    font-family: 'Microsoft YaHei';   
+    color:#fff;   
+    text-shadow: 0.03rem 0.03rem 0.03rem  rgba(158,113,66,0.75);
+}
+.cardStyle .cardName{
+    font-size: 0.48rem;
+    margin-bottom:0.08rem;
+    display: block;
+}
+.cardStyle .cardNumber{
+    font-size: 0.32rem;
+    margin-bottom:0.08rem;
+    display: block;
+}
+.cardStyle .cardTime{
+    font-size: 0.22rem;
+}
+
+.cardYear{
+    background: url(../images/card_year.png) no-repeat center;
+    background-size:cover;
+}
+.cardOneTOne{
+    background: url(../images/card_cardOneTOne.png) no-repeat center;
+    background-size:cover;
+}
+.cardIntensify{
+    background: url(../images/card_intensify.png) no-repeat center;
+    background-size:cover;    
+}
+.cardTimes{
+    background: url(../images/card_times.png) no-repeat center;
+    background-size:cover; 
+}
+.cardPersonaltrainer{
+    background: url(../images/card_personaltrainer.png) no-repeat center;
+    background-size:cover;
+}
+
+.mine_Message{
+    padding:0.60rem 0 0.55rem 0;
+    text-align: center;
+    font-family: 'Microsoft YaHei';  
+}
+.mine_Message .mine_face{
+    width: 2.22rem;
+    height: 2.22rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+    border: solid 0.10rem rgba(255,255,255,0.15);
+    margin: 0 auto;
+}
+.mine_Message .mine_nickName{
+    font-size: 0.26rem;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    padding: 0.15rem 0 0.32rem 0;
+    position: relative;
+}
+.mine_Message .mine_nickName .icon_chu{
+    width: 0.44rem;
+    height: 0.37rem;
+    background: url(../images/icon_chu.png) no-repeat center;
+    background-size:cover;
+    display: block;
+    position: absolute;
+    right: -0.50rem;
+    top: 0.15rem;
+}
+.mine_Message .mine_nickName .icon_zhong{
+    width: 0.44rem;
+    height: 0.37rem;
+    background: url(../images/icon_zhong.png) no-repeat center;
+    background-size:cover;
+    display: block;
+    position: absolute;
+    right: -0.50rem;
+    top: 0.15rem;
+}
+.mine_Message .mine_nickName .icon_gao{
+    width: 0.44rem;
+    height: 0.37rem;
+    background: url(../images/icon_gao.png) no-repeat center;
+    background-size:cover;
+    display: block;
+    position: absolute;
+    right: -0.50rem;
+    top: 0.15rem;
+}
+.mine_Message .mine_signIn{
+    display: block;
+    width: 2.45rem;
+    height: 0.67rem;
+    text-align: center;
+    line-height: 0.67rem;
+    color: #fff;
+    font-size: 0.26rem;
+    background: #ff681f;
+    border-radius: 0.30rem;
+    margin: 0 auto;
+}
+.mineList_item{
+    margin: 0 0.22rem 2.50rem 0.22rem;
+    background:#3b3a43;
+    border-radius: 0.20rem;
+    padding:0 0.15rem;
+}
+.mineList_item li{
+    height: 0.88rem;
+    border-bottom:solid 1px #000000;
+    padding:0 0.18rem 0 0.32rem;
+    font-size: 0.26rem;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mineList_item li:last-child{
+    border-bottom:none;
+}
+.mineList_item li .icon_{
+    width: 0.38rem;
+    height: 0.42rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.30rem;
+}
+.mineList_item li .item_name_r{
+    font-size: 0.26rem;
+    color:#a6a6a6;
+}
+.mineList_item li .item_name_r .icon_arrow,.holiday_time li .icon_arrow{
+    width: 0.09rem;
+    height: 0.17rem;
+    background: url(../images/arrow.png) no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.15rem;
+}
+.mineList_item li > em{
+    display: block;
+    width: 0.09rem;
+    height: 0.17rem;
+    background: url(../images/arrow.png) no-repeat center;
+    background-size: cover;
+}
+.mineList_item li .icon_askLeave{
+    background: url(../images/icon_askLeave.png) no-repeat center;
+    background-size: cover;
+}
+.mineList_item li .icon_record{
+    background: url(../images/icon_record.png) no-repeat center;
+    background-size: cover;
+}
+.mineList_item li .icon_lesson{
+    background: url(../images/icon_lesson.png) no-repeat center;
+    background-size: cover;
+}
+.mineList_item li .icon_mineCard{
+    background: url(../images/icon_mineCard.png) no-repeat center;
+    background-size: cover;
+}
+.mineList_item li .icon_man{
+    background: url(../images/icon_man.png) no-repeat center;
+    background-size: cover;
+}
+.holiday{
+    font-family: 'Microsoft YaHei';
+}
+.holiday .holiday_times{
+    color: #787878;
+    font-size:0.22rem;
+    padding:0 0.24rem;
+    height: 0.86rem;
+    line-height: 0.86rem;
+    display: block;
+}
+.holiday .holiday_time li{
+    background: #2b2a30;
+    height: 0.87rem;
+    border-bottom:solid 1px #000;
+    box-sizing: border-box;
+    padding:0 0.25rem 0 0.38rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.holiday_time li .item_name_tit,.holiday_reason .item_name_tit{
+    font-size: 0.26rem;
+    color: #fff;
+    display: block;
+}
+.holiday_time li .icon_orange,.holiday_reason .icon_orange{
+    color: #ff7253;
+    margin-right: 0.1rem;
+}
+.holiday_time .datetime{
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: right;
+}
+.holiday_reason{
+    background: #2b2a30;
+    padding: 0.30rem 0.38rem;
+    margin: 0.18rem 0 1.13rem 0;
+}
+.holiday .holiday_reason .item_name_textarea{
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 1.35rem;
+    width: 100%;
+    margin-top: 0.22rem;
+    color: #fff;
+    font-size: 0.26rem;
+}
+.holiday .submitBtn{
+    width: 7.02rem;
+    height:0.62rem;
+    line-height: 0.62rem;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    background:#ff681f;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.05rem;
+}
+.myCard .myCard_invoice{
+    display: block;
+    padding:0.42rem 0.22rem 0.26rem 0.22rem;
+    font-size: 0.26rem;
+    color: #767676;    
+}
+.myCard .myCard_supportLesson{
+    height: 1.24rem;
+    background: #2b2a30;
+    font-size: 0.26rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 0.22rem;
+}
+.myCard .myCard_item_left{
+    color: #a7a6a6;
+}
+.myCard .myCard_item_right{
+    color: #767676;
+}
+.myCard .icon_bigArrow{
+    width: 0.18rem;
+    height: 0.31rem;
+    background: url(../images/bigArrow.png) no-repeat center;
+    background-size:cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.15rem;
+}
+.myCard .myCard_rule{
+    padding:0.28rem 0.22rem;
+    color: #616161;
+    font-size:0.26rem;
+    font-family: 'Microsoft YaHei';
+    line-height: 1.3;
+}
+.myCard .myCard_rule .myCard_rule_tit{
+    display: block;
+    margin-bottom:0.15rem;
+}
+
+.mylesson_head{
+    font-family: 'Microsoft YaHei';
+    height: 0.91rem;
+    background: #2b2a30;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.26rem;
+    color:#bab7c9;
+}
+.mylesson_head > span{
+    border-right:solid 1px #000;
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+.mylesson_head > span.active{
+    color: #ff681f;    
+}
+.mylesson_head > span.active:after{
+    position: absolute;
+    width: 100%;
+    content: '';
+    border-top:solid 1px #ff681f;
+    left: 0;
+    bottom:-0.3rem;
+}
+.mylesson_head > span:last-child{
+    border-right:none;
+}
+.mylesson .mylesson_now{
+   margin-top: 0.24rem;
+   margin-bottom:2rem;
+   background:#2b2a30; 
+   font-family: 'Microsoft YaHei';
+}
+.mylesson .mylesson_now li{
+    height: 1.20rem;
+    padding:0 0.22rem;
+    border-bottom:solid 1px #000;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mylesson .mylesson_now li .mylesson_now_name{
+    font-size: 0.30rem;
+    color:#fff;
+}
+.mylesson .mylesson_now li .mylesson_data{
+    font-size: 0.28rem;
+    color:#ff681f;
+    margin-bottom:0.02rem; 
+    display: block;
+}
+.mylesson .mylesson_now li .mylesson_time{
+    font-size: 0.26rem;
+    color:#969696;
+}
+.mylesson .mylesson_number{
+    display: block;
+    height: 0.83rem;
+    padding:0.38rem 0.22rem 0 0.22rem;
+    box-sizing: border-box;
+    font-size:0.26rem;
+    color: #696969;
 }
