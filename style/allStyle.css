@@ -227,6 +227,10 @@ img{
     left: 0;
     box-sizing: border-box;
 }
+.footer > div > em{
+    display: block;
+    text-align: center;
+}
 .footer .icon_home{
     display: block;
     width: 0.47rem;
@@ -234,6 +238,7 @@ img{
     background: url(../images/icon_home.png) no-repeat center;
     background-size: cover; 
     margin-bottom: 0.02rem;
+    margin: 0 auto;
 }
 .footer .icon_subscribe{
     display: block;
@@ -241,6 +246,7 @@ img{
     height: 0.53rem;
     background: url(../images/icon_subscribe.png) no-repeat center;
     background-size: cover; 
+    margin: 0 auto;
 }
 .footer .icon_mine{
     display: block;
@@ -248,6 +254,7 @@ img{
     height: 0.53rem;
     background: url(../images/icon_mine.png) no-repeat center;
     background-size: cover; 
+    margin: 0 auto;
 }
 .footer .active{
     color: #ff681f;
@@ -417,6 +424,7 @@ img{
 .mineList_item li .item_name_r{
     font-size: 0.26rem;
     color:#a6a6a6;
+    font-family: PingFangSC-Regular;
 }
 .mineList_item li .item_name_r .icon_arrow,.holiday_time li .icon_arrow{
     width: 0.09rem;
