@@ -1,5 +1,11 @@
 body,html{
-    background: #1f1e24
+    background: #1f1e24;
+    font-family: PingFangSC-Regular;
+}
+body .layui-m-layer .layui-m-layer-msg{
+    background: #fff;
+    color: #646464;
+    font-size: 0.26rem;
 }
 img{
     width: 100%;
@@ -29,8 +35,8 @@ img{
     background:#2b2a30;
     margin: 0.17rem 0; 
     padding: 0.24rem 0.22rem 0.10rem 0.22rem; 
-    display: flex;
-    justify-content: start;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: start; -webkit-justify-content: start; -webkit-box-pack: justify;
     align-items:top;
     box-sizing: border-box;
 }
@@ -64,9 +70,9 @@ img{
     height: 0.74rem;
     box-sizing: border-box;
     border-bottom:solid 1px #3c3b41;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
+    align-items:center; -webkit-align-items:center;
 }
 .public_header .notice_tit{
     font-size: 0.28rem;
@@ -103,9 +109,9 @@ img{
 }
 .notice .notice_item{
     height: 0.83rem;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
+    align-items:center; -webkit-align-items:center;
 }
 .notice .notice_item a{
     white-space: nowrap;
@@ -146,8 +152,8 @@ img{
 }
 .recommend .recomm_item_name{
     height: 2.20rem;    
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
     border-bottom:solid 1px #26242e;
 }
@@ -179,6 +185,7 @@ img{
  }
 .recommend .recomm_item_name .recomm_item_btn{
     width: 1.48rem;
+    text-align: center;
 }
 .recommend .recomm_item_name .recomm_item_btn a{
     display: block;
@@ -193,6 +200,9 @@ img{
     border-radius: 0.05rem;
     margin-bottom: 0.12rem;
 }
+.recommend .recomm_item_name .recomm_item_btn a.cancelMeet{
+    background: #868686;
+}
 .recommend .recomm_item_name .recomm_item_btn span{   
     color: #a2a2a2;
     font-size: 0.22rem;
@@ -205,8 +215,8 @@ img{
     border-top:solid 1px #434249;  
     background: #2a292e;  
     padding: 0 0.74rem;
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
     font-size: 0.20rem;
     font-family: 'Microsoft YaHei';
@@ -390,8 +400,8 @@ img{
     font-size: 0.26rem;
     color: #fff;
     font-family: 'Microsoft YaHei';
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
 }
 .mineList_item li:last-child{
@@ -461,8 +471,8 @@ img{
     border-bottom:solid 1px #000;
     box-sizing: border-box;
     padding:0 0.25rem 0 0.38rem;
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
 }
 .holiday_time li .item_name_tit,.holiday_reason .item_name_tit{
@@ -479,6 +489,8 @@ img{
     border: none;
     outline: none;
     text-align: right;
+    font-size: 0.26rem;
+    color: #fff;
 }
 .holiday_reason{
     background: #2b2a30;
@@ -518,8 +530,8 @@ img{
     height: 1.24rem;
     background: #2b2a30;
     font-size: 0.26rem;
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
     padding:0 0.22rem;
 }
@@ -554,11 +566,15 @@ img{
     font-family: 'Microsoft YaHei';
     height: 0.91rem;
     background: #2b2a30;
-    display: flex;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
     justify-content: space-around;
     align-items: center;
     font-size: 0.26rem;
     color:#bab7c9;
+}
+.mylesson_head_make{
+    height: 0.93rem;
+    background: #3b3a43;
 }
 .mylesson_head > span{
     border-right:solid 1px #000;
@@ -591,8 +607,8 @@ img{
     padding:0 0.22rem;
     border-bottom:solid 1px #000;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between;  -webkit-box-pack: justify;
     align-items: center;
 }
 .mylesson .mylesson_now li .mylesson_now_name{
@@ -616,4 +632,52 @@ img{
     box-sizing: border-box;
     font-size:0.26rem;
     color: #696969;
+}
+
+.appointmentTime{
+    width: 100%;
+    height: 1.14rem;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.26rem;
+    color: #bab7c9;
+    font-family: 'Microsoft YaHei';
+}
+.appointmentTime .today{
+    display: block;
+    width: 0.90rem;
+    height: 0.64rem;
+    box-sizing: border-box;
+    border: solid 1px #ff681f;
+    text-align: center;
+    background:#32303a;
+    position: relative; 
+    line-height: 1;
+    padding-top: 0.04rem;
+    box-sizing: border-box;
+}
+.appointmentTime .today > em{
+    display: block;
+    font-size: 0.22rem;
+    color: #797979;
+    position: relative;
+    z-index: 1000;
+    line-height: 1;
+}
+.appointmentTime .today:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.12rem;
+    height: 0.12rem;
+    border-left: solid 1px #ff681f;
+    border-top: solid 1px #ff681f;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    left: 50%;
+    bottom: -0.08rem;
+    background: #32303a;
+    margin-left: -0.05rem;  
+    z-index: 100;
 }

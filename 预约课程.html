@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>预约课程</title>
+    <script>
+        ; (function (win, lib) {
+            window["version"] = 'v1.0.0';
+            var doc = win.document;
+            var docEl = doc.documentElement;
+            var metaEl = doc.querySelector('meta[name="viewport"]');
+            var flexibleEl = doc.querySelector('meta[name="flexible"]');
+            var dpr = 0;
+            var scale = 0;
+            var tid;
+            var flexible = lib.flexible || (lib.flexible = {});
+            var isAndroid = win.navigator.appVersion.match(/android/gi);
+            var isIPhone = win.navigator.appVersion.match(/iphone/gi);
+            if (metaEl) {
+                console.warn('将根据已有的meta标签来设置缩放比例');
+                var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
+                if (match) {
+                    scale = parseFloat(match[1]);
+                    dpr = parseInt(1 / scale);
+                }
+            } else if (flexibleEl) {
+                var content = flexibleEl.getAttribute('content');
+                if (content) {
+                    var initialDpr = content.match(/initial\-dpr=([\d\.]+)/);
+                    var maximumDpr = content.match(/maximum\-dpr=([\d\.]+)/);
+                    if (initialDpr) {
+                        dpr = parseFloat(initialDpr[1]);
+                        scale = parseFloat((1 / dpr).toFixed(2));
+                    }
+                    if (maximumDpr) {
+                        dpr = parseFloat(maximumDpr[1]);
+                        scale = parseFloat((1 / dpr).toFixed(2));
+                    }
+                }
+            }
+            if (!dpr && !scale) {
+                var devicePixelRatio = win.devicePixelRatio;
+                if (isIPhone && !window.navigator.userAgent.match(/OS 9_3/)) {
+                    // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+                    if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {
+                        dpr = 2;
+                    } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)) {
+                        dpr = 2;
+                    } else {
+                        dpr = 1;
+                    }
+                } else {
+                    // 其他设备下，仍旧使用1倍的方案
+                    dpr = 1;
+                }
+                scale = 1 / dpr;
+            }
+            docEl.setAttribute('data-dpr', dpr);
+            if (!metaEl) {
+                metaEl = doc.createElement('meta');
+                metaEl.setAttribute('name', 'viewport');
+                metaEl.setAttribute('content', 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+                if (docEl.firstElementChild) {
+                    docEl.firstElementChild.appendChild(metaEl);
+                } else {
+                    var wrap = doc.createElement('div');
+                    wrap.appendChild(metaEl);
+                    doc.write(wrap.innerHTML);
+                }
+            }
+            function refreshRem() {
+                var width = docEl.getBoundingClientRect().width;
+                if (width / dpr > 320) {
+                    width = 320 * dpr;
+                }
+                var rem = 100 * width / 640;
+                if (!width) {
+                    //安卓一出来webview无宽度显示错误解决
+                    rem = 50
+                }
+                if (isIPhone) {
+                    window.baseFontSize_haina = rem
+                } else {
+                    window.baseFontSize_haina = rem * 2
+                }
+
+                docEl.style.fontSize = rem + 'px';
+                flexible.rem = win.rem = rem;
+            }
+            win.addEventListener('resize', function () {
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }, false);
+            win.addEventListener('pageshow', function (e) {
+                if (e.persisted) {
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 300);
+                    if (isIPhone) {
+                        window.location.reload()
+                    }
+                }
+            }, false);
+            if (doc.readyState === 'complete') {
+                doc.body.style.fontSize = 12 * dpr + 'px';
+            } else {
+                doc.addEventListener('DOMContentLoaded', function (e) {
+                    doc.body.style.fontSize = 12 * dpr + 'px';
+                }, false);
+            }
+            refreshRem();
+            flexible.dpr = win.dpr = dpr;
+            flexible.refreshRem = refreshRem;
+            flexible.rem2px = function (d) {
+                var val = parseFloat(d) * this.rem;
+                if (typeof d === 'string' && d.match(/rem$/)) {
+                    val += 'px';
+                }
+                return val;
+            }
+            flexible.px2rem = function (d) {
+                var val = parseFloat(d) / this.rem;
+                if (typeof d === 'string' && d.match(/px$/)) {
+                    val += 'rem';
+                }
+                return val;
+            }
+        })(window, window['lib'] || (window['lib'] = {}));
+    </script>
+    <script src="js/swiper.min.js"></script>
+    <script src="layer_mobile/layer.js"></script>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/swiper.min.css">
+    <link rel="stylesheet" href="layer_mobile/need/layer.css">
+    <link rel="stylesheet" href="style/allStyle.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="appointmentTime">
+            <span class="today">今天
+                <em>8.22</em>
+            </span>
+            <span>四</span>
+            <span>五</span>
+            <span>六</span>
+            <span>日</span>
+            <span>一</span>
+            <span>二</span>
+        </div>
+        <div class="mylesson">
+            <div class="mylesson_head mylesson_head_make">
+                <span class="active">年卡课</span>
+                <span>私教课</span>
+                <span>强化课</span>
+            </div>
+        </div>
+        <div class='recommend'>
+            <div class="recommend_item">
+                <span class="recomm_item_tit">陶泥</span>
+                <div class="recomm_item_wrap">
+                    <div class="recomm_item_name">
+                        <div class="recomm_item_img">
+                            <img src="images/recomm01.jpg" alt="">
+                        </div>
+                        <div class="recomm_item_time">
+                            <span>初级班-花剑</span>
+                            <em>18:40-21:10</em>
+                        </div>
+                        <div class="recomm_item_btn">
+                            <a href="javascript:void(0)" id="reservation">预约</a>
+                            <span>(已有0人预约)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend_item">
+                <span class="recomm_item_tit">17:40-20:10</span>
+                <div class="recomm_item_wrap">
+                    <div class="recomm_item_name">
+                        <div class="recomm_item_img">
+                            <img src="images/recomm01.jpg" alt="">
+                        </div>
+                        <div class="recomm_item_time">
+                            <span>初级班</span>
+                            <em>18:40-21:10</em>
+                        </div>
+                        <div class="recomm_item_btn">
+                            <a href="#" class="cancelMeet">取消预约</a>
+                            <span>已预约</span>
+                        </div>
+                    </div>
+                    <div class="recomm_item_name">
+                        <div class="recomm_item_img">
+                            <img src="images/recomm01.jpg" alt="">
+                        </div>
+                        <div class="recomm_item_time">
+                            <span>中级班</span>
+                            <em>18:40-21:10</em>
+                        </div>
+                        <div class="recomm_item_btn">
+                            <a href="#">预约</a>
+                            <span>(已有0人预约)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.getElementById('reservation').onclick = function () {
+                layer.open({
+                    content: '预约成功'
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
+            }            
+        </script>
+        <div class="footer">
+            <div class="home">
+                <span class="icon_home"></span>
+                <em>首页</em>
+            </div>
+            <div class="subscribe">
+                <span class="icon_subscribe"></span>
+                <em>预约</em>
+            </div>
+            <div class="mine active">
+                <span class="icon_mine"></span>
+                <em>我的</em>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
