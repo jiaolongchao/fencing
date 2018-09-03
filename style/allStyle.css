@@ -39,16 +39,96 @@ img{
     margin: 0 auto;
 }
 .login .loginWrap .inpBox{
-    width: 100%;
+    width: 5.90rem;
     height: 1.10rem;
-    border:solid 0.02rem red;
-    border-image:-webkit-linear-gradient(#d9281f,#ff864f) 30 30;
+    background:url(../images/border-image.png) no-repeat;
+    background-size: cover;
+    box-sizing: border-box;   
+    position: relative; 
+}
+.login .loginWrap .inpBox .icon_l{
+    position: absolute;
+    left: 0.40rem;
+    top: 50%;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-top: -0.225rem;
+}
+.login .loginWrap .inpBox .icon_name{
+    background:url(../images/icon_name.png) no-repeat;
+    background-size: cover;
+}
+.login .loginWrap .inpBox .icon_pwd{
+    background:url(../images/icon_pwd.png) no-repeat;
+    background-size: cover;
+}
+.login .loginWrap .inpBox .icon_code{
+    background:url(../images/icon_code.png) no-repeat;
+    background-size: cover;
+}
+.login .loginWrap .inpBox .inputB{
+    position: relative;
+    width: 100%;
+    height: 0.45rem;
+    padding-left:1.15rem;
+    padding-right: 1.30rem;
+    box-sizing: border-box;
+    top: 0.30rem;
+    color: #fff;
+    font-size: 0.30rem;
+    border:none;
+    outline: none;
+    background:transparent;
+}
+.login .codeBox{
+    width: 1.84rem;
+    height: 0.80rem;
+    display: block;
+    position: absolute;
+    right: 0.18rem;
+    top: 50%;
+    margin-top:-0.40rem;
+    color: #fff;
+    font-size:0.30rem;
+    text-align: center;
+    line-height: 0.80rem;
+    background-image: linear-gradient(45deg, #d9281f 0%, #fe844e 100%);
+    background-image: -webkit-linear-gradient(45deg, #d9281f 0%, #fe844e 100%);
     border-radius: 0.50rem;
 }
-.login .loginWrap .inpBox:first-child{
-    margin-bottom: 0.38rem;
+.login .loginWrap .inpBox .inputB::-webkit-input-placeholder{
+    color: #4a494f;
 }
 
+.login .loginWrap .inp_a{
+    margin-bottom: 0.38rem;
+}
+.login .loginWrap .inp_b{
+    margin-bottom: 0.28rem;
+}
+.login .otherLoginType{
+    font-size: 0.26rem;
+    padding: 0 .40rem;
+    height: 0.46rem;
+    color: #e95134;
+    display: flex;     display: -webkit-box;  display: -webkit-flex;
+    justify-content: space-between; -webkit-justify-content: space-between; -webkit-box-pack: justify;
+    align-items:center;
+    margin-bottom: 0.60rem;
+}
+.login .loginBtn{
+    display: block;
+    width: 100%;
+    height: 1.06rem;
+    background-image: linear-gradient(45deg, #d9281f 0%, #fe844e 100%);
+    background-image: -webkit-linear-gradient(45deg, #d9281f 0%, #fe844e 100%);
+    border-radius: 0.50rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.06rem;
+    font-size:0.42rem;
+    font-family: 'Microsoft YaHei';
+}
 .introduction{
     width: 100%;
     height: 2.23rem;
