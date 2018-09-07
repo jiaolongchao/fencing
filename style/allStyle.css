@@ -130,11 +130,10 @@ img{
     font-family: 'Microsoft YaHei';
 }
 .introduction{
-    width: 100%;
-    height: 2.23rem;
+    width: 100%;    
     background:#2b2a30;
     margin: 0.17rem 0; 
-    padding: 0.24rem 0.22rem 0.10rem 0.22rem; 
+    padding: 0.24rem 0.22rem 0.24rem 0.22rem; 
     display: flex;     display: -webkit-box;  display: -webkit-flex;
     justify-content: start; -webkit-justify-content: start; -webkit-box-pack: justify;
     align-items:top;
@@ -157,8 +156,11 @@ img{
     font-size: 0.26rem;
     color: #a7a6a6;
     display: block;
-    line-height: 1.2;
+    line-height: 1.25;
     margin-bottom: 0.15rem;
+    text-indent: 0.52rem;
+    transition: all 1s linear;
+    -webkit-transition: all 1s linear;
 }
 .introduction .intrText .slideUp{
     font-size: 0.26rem;
@@ -185,7 +187,7 @@ img{
     background-size: cover;
     display: inline-block;
     vertical-align: middle;
-    margin-right:0.1rem;
+    margin-right:0.15rem;
 }
 .public_header .notice_tit .icon_recommend{
     width: 0.33rem;
@@ -196,16 +198,46 @@ img{
     vertical-align: middle;
     margin-right:0.05rem;
 }
+.public_header .notice_tit .icon_contactUs{
+    width: 0.30rem;
+    height: 0.21rem;
+    background: url(../images/icon_contactUs.png) no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.08rem;
+}
+
 .public_header .notice_more{
     font-size:0.24rem;
     color:#939393;
 }
 
-
-.notice{
+.contactUs{
     background:#2b2a30;
     padding: 0 0.22rem;    
     margin-bottom: 0.10rem;
+}
+
+.contactUs .contactUs_text{
+    padding: 0.1rem 0 0.5rem 0;
+}
+.contactUs .contactUs_text p{
+    font-size: 0.26rem;
+    color: #a7a6a6;
+    line-height: 1.5;
+}
+.contactUs .contactUs_text p strong{
+    display: block;
+    color: #fff;
+    font-size: 0.30rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.05rem;
+}
+.notice{
+    background:#2b2a30;
+    padding: 0 0.22rem;    
+    margin-bottom: 0.05rem;
 }
 .notice .notice_item{
     height: 0.83rem;
@@ -223,6 +255,7 @@ img{
     font-size: 0.26rem;
     color: #a7a6a6;
     display: block;
+    white-space: nowrap;
 }
 
 .recommend{
@@ -751,6 +784,9 @@ img{
     font-size: 0.26rem;
     color: #bab7c9;
     font-family: 'Microsoft YaHei';
+    text-align: center;
+    padding: 0 0.15rem;
+    box-sizing: border-box;
 }
 .appointmentTime .today{
     display: block;
