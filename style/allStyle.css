@@ -27,6 +27,7 @@ img{
 .main{
     height: 100vh;
     position: relative;
+    padding-bottom: 1rem;
 }
 .login{
     height: 100vh;
@@ -237,7 +238,7 @@ img{
 .notice{
     background:#2b2a30;
     padding: 0 0.22rem;    
-    margin-bottom: 0.05rem;
+    margin-bottom: 0.17rem;
 }
 .notice .notice_item{
     height: 0.83rem;
@@ -250,6 +251,15 @@ img{
     width: 5.50rem;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.notice .notice_item .icon_notice{
+    width: 0.26rem;
+    height: 0.24rem;
+    background: url(../images/icon_notice.png) no-repeat center;
+    background-size: cover;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:0.15rem;
 }
 .notice .notice_item a,.notice .notice_item span{
     font-size: 0.26rem;
